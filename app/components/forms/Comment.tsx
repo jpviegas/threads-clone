@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import {
+  Form,
   FormControl,
   FormField,
   FormItem,
@@ -13,8 +14,7 @@ import { CommentValidation } from '@/lib/validations/thread';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/router';
-import { Form, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
 interface Props {
@@ -24,7 +24,6 @@ interface Props {
 }
 
 const Comment = ({ threadId, currentUserImg, currentUserId }: Props) => {
-  const router = useRouter();
   const pathname = usePathname();
 
   const form = useForm({

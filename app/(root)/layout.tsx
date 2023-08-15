@@ -1,5 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs';
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
 import Bottombar from '../components/shared/Bottombar';
 import LeftSidebar from '../components/shared/LeftSidebar';
 import RightSidebar from '../components/shared/RightSidebar';
@@ -11,7 +11,7 @@ export const metadata = {
   description: 'A Next.JS Threads app clone',
 };
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
@@ -21,7 +21,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>
+        {/* <body className={inter.className}> */}
+        <body>
           <Topbar />
           <main className="flex flex-row">
             <LeftSidebar />

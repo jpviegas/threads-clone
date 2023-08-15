@@ -36,7 +36,7 @@ const ThreadCard = ({
 }: Props) => {
   return (
     <article
-      className={`rounded-x1 flex w-full flex-col rounded-${
+      className={`rounded-x1 flex w-full flex-col ${
         isComment ? 'px-0 xs:px-7' : 'bg-dark-2 p-7'
       } `}
     >
